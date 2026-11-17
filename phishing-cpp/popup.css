@@ -1,0 +1,158 @@
+body {
+    width: 300px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 15px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #2c2c2c;
+    padding-bottom: 10px;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.stats-card {
+    background: #1e1e1e;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 12px 0;
+    border-left: 4px solid #e74c3c;
+}
+
+.stats-card p {
+    margin: 0;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.stats-card h1 {
+    margin: 5px 0 0;
+    font-size: 28px;
+    color: #e74c3c;
+}
+
+.add-section {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background: #1e1e1e;
+    color: white;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #00599C;
+}
+
+button {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #c0392b;
+}
+
+.list-container h4 {
+    margin: 0 0 8px;
+    font-size: 13px;
+    color: #bbb;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 120px;
+    overflow-y: auto;
+}
+
+li {
+    background: #1e1e1e;
+    padding: 6px 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+
+.del-btn {
+    color: #ff7675;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0 4px;
+}
+
+.del-btn:hover {
+    color: #d63031;
+}
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #555;
+    transition: .3s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .3s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #2ecc71;
+}
+
+input:checked+.slider:before {
+    transform: translateX(20px);
+}

@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    
+    "name": "PhishGuard",
+    "version": "1.0",
+    "description": "Real-time phishing and malware blocker powered by a C++ engine.",
+    "icons":{
+        "128": "logo.png"
+    },
+    "permissions": [
+        "tabs",
+        "webNavigation",
+        "storage",
+        "downloads"
+    ],
+    "host_permissions": [
+        "<all_urls>",
+        "https://safebrowsing.googleapis.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+    }
+}
